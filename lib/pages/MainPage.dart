@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:name_meaning/pages/All.dart';
-import 'package:name_meaning/pages/Boys.dart';
 import 'package:name_meaning/pages/Favorites.dart';
-import 'package:name_meaning/pages/Girls.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -11,7 +9,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       initialIndex: 1,
-      length: 4,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Turkmen Names"),
@@ -29,18 +27,14 @@ class MainPage extends StatelessWidget {
             unselectedLabelColor: Colors.grey,
             indicatorColor: Colors.white,
             tabs: <Widget>[
-              Tab(text: "All"),
-              Tab(text: "Boys"),
-              Tab(text: "Girls",),
+              Tab(text: "All Names"),
               Tab(text: "Favorites",),
           ]),
         ),
         body: TabBarView(
           children: <Widget>[
-            Center(child: All(),),
-            Center(child: Boys(),),
-            Center(child: Girls(),),
-            Center(child: Favorites(),),
+            Center(child: All()),
+            Center(child: Favorites()),
           ]),
       ),
     );
