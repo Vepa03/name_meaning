@@ -1,0 +1,1625 @@
+[
+    {
+        "name": "Abdy",
+        "gender": "oglan",
+        "meaning": "Abdy (arap. gul, gullukçy/hyzmatkär)- 'Allanyň wepaly guly'."
+    },
+    {
+        "name": "Abdylla",
+        "gender": "oglan",
+        "meaning": "'Allanyň wepaly we ygrarly guly'."
+    },
+    {
+        "name": "Abdyrahman",
+        "gender": "oglan",
+        "meaning": "Abdy (arap. gul, gullukçy/hyzmatkär) + Rahman (arap. merhemetli, mähirli) atlaryndan meýdana gelen at bolup manysy - 'mähirli Allanyň guly'."
+    },
+    {
+        "name": "Abdyrahym",
+        "gender": "oglan",
+        "meaning": "Abdy (arap. gul, gullukçy/hyzmatkär) + Rahym (rehimli, şepagatly, mähriban, Allanyň epiteti) - atlaryndan meýdana gelen at bolup manysy = 'mähriban, rehimli Allanyň wepaly guly'."
+    },
+    {
+        "name": "Abdyrazak",
+        "gender": "oglan",
+        "meaning": "Abdy (arap. gul, gullukçy/hyzmatkär) + Razak (rysgy; rysgaly ýetiriji) - atlaryndan meýdana gelen at bolup manysy = 'Rysky, rysgaly ýetiriji Allanyň wepaly guly'."
+    },
+    {
+        "name": "Abdyrehim",
+        "gender": "oglan",
+        "meaning": "Abdy (arap. gul, gullukçy/hyzmatkär) + Rehim (ara. merhemetli, rehimli, şepagatly) atlaryndan meýdana gelen at bolup manysy - 'merhemetli Allanyň guly'."
+    },
+    {
+        "name": "Abdyresul",
+        "gender": "oglan",
+        "meaning": "Abdy (arap. gul, gullukçy/hyzmatkär) + Resul (arap. wekil, iberilen adam) atlaryndan meýdana gelen at bolup manysy + 'Alla tarapyndan iberilen ynamly we wepaly gul/hyzmatkär'."
+    },
+    {
+        "name": "Adalatmyrat",
+        "gender": "oglan",
+        "meaning": "Adalat (adyl, adalatly, gylyç) + Myrat (isleg, maksat, arzuw) - atlaryndan meýdana gelen at bolup manysy = 'dyl arzuw, adalatly maksat' "
+    },
+    {
+        "name": "Adam",
+        "gender": "oglan",
+        "meaning": "1) Hakyky/ dogruçyl adam (ynsan) bolsun. 2) Ilkinji pygamberiň ady"
+    },
+    {
+        "name": "Annaberdi",
+        "gender": "oglan",
+        "meaning": "Anna (Baýram, Anna güni) + Berdi (Alla tarapyndan berilen, sowgat edilen) atlaryndan meýdana gelen at bolup manysy - 'Alla tarapyndan anna güni berilen, sowgat edilen çaga'. "
+    },
+    {
+        "name": "Didar",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Öýe ýüzi düşen çaga’’ diýmek"
+    },
+    {
+        "name": "Dinmuhammet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Muhammet pygamberiň dinini eýeriji’’ diýmek"
+    },
+    {
+        "name": "Diýar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Watan’’ diýmek."
+    },
+    {
+        "name": "Döwlet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Döwletli bolsun’’ diýmek."
+    },
+    {
+        "name": "Durdy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Uzak ýaşasyn’’diýmek"
+    },
+    {
+        "name": "Daniýar",
+        "gender": "oglan",
+        "meaning": "  Manysy ,,Akylly, bilimli, dana dost’’ diýmek."
+    },
+    {
+        "name": "Daňatar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Daňdan doglan çaga’’ diýmek."
+    },
+    {
+        "name": "Daýanç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Maşgalasynyň daýanjy’’ diýmek."
+    },
+    {
+        "name": "Deňiz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Deňiz ýaly giň’’ diýmek."
+    },
+    {
+        "name": "Derýa",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Derýa ýaly giň’’diýmek. "
+    },
+    {
+        "name": "Bezirgen",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Söwdagär’’ diýmek."
+    },
+    {
+        "name": "Bähbit",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Ene – atasyna bähbitli kömek etsin’’ diýmek."
+    },
+    {
+        "name": "Bäşim",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Maşgalada doglan bäşinji ogul’’ diýmek."
+    },
+    {
+        "name": "Çary",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Maşgalada doglan dördünji ogul’’ diýmek."
+    },
+    {
+        "name": "Dawut",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Ýakyn söýgüli dost’’diýmek."
+    },
+    {
+        "name": "Baky",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Ömürlik we hemişe ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Batyr",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Batyr ýürekli bolsun’’ diýmek."
+    },
+    {
+        "name": "Begenç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Maşgalasyny begendiren’’ diýmek."
+    },
+    {
+        "name": "Begler",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Begleriň begi’’ diýmek."
+    },
+    {
+        "name": "Begmyrat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara  dakylýan at. Manysy,,Beg ýaly ogul arzuwyna ýetsin’’diýmek."
+    },
+    {
+        "name": "Baýramgylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Baýramçylykda doglan ogul uzak ýaşasyn, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Baýramdurdy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Baýramçylykda doglan çaga dursun, ölmesin, uzak ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Baýrammuhammet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Baýramçylykda doglan öwgüli ogul’’ diýmek."
+    },
+    {
+        "name": "Baýrammyrat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Baýramçylykda doglan ogul maksat-myradyna ýetsin’’ diýmek."
+    },
+    {
+        "name": "Baýramnazar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Baýramçylykda nazar eden ogul’’diýmek."
+    },
+    {
+        "name": "Baýramgeldi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy “Baýramçylykda gelen oglan’’ diýmek."
+    },
+    {
+        "name": "Baýramguly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy “Baýramçylykda doglan ogul’’ diýmek."
+    },
+    {
+        "name": "Baýramgurban",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy “Gurban baýramçylygynda doglan çaga’’ diýmek."
+    },
+    {
+        "name": "Baýnyýaz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Dilenip alnan döwletli çaga’’ diýmek."
+    },
+    {
+        "name": "Baýpolat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Döwletli we jany hem polat ýaly berk bolsun’’ diýmek."
+    },
+    {
+        "name": "Baýram",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Baýramçylykda doglan çaga’’ diýmek."
+    },
+    {
+        "name": "Baýrambaý",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Baýramçylykda doglan döwletli ogul’’ diýmek."
+    },
+    {
+        "name": "Baýramberdi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Baýramçylykda doglan belent derejeli gyz’’diýmek."
+    },
+    {
+        "name": "Baýly",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Baýlykly, döwletli ogul’’ diýmek."
+    },
+    {
+        "name": "Baýmuhammet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Döwletli we öwgüli ogul’’ diýmek."
+    },
+    {
+        "name": "Baýmyrat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Döwletli ogul myrat-maksadyna ýetsin’’ diýmek."
+    },
+    {
+        "name": "Baýnazar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Öňümize baý, döwletli ogul nazar etdi’’ diýmek."
+    },
+    {
+        "name": "Baýnepes",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Baýyň nepesi bilen doglan ogul’’diýmek."
+    },
+    {
+        "name": "Baýguly",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Baý, döwletli ogul’’ diýmek."
+    },
+    {
+        "name": "Baýgurban",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Gurban aýynda doglan döwletli ogul’’ diýmek."
+    },
+    {
+        "name": "Baýgylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Döwletli, baý bolsun, uzak ýa’asyn, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Baýdak",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Durmuşy baýýdak ýaly parlaýarsyn’’ diýmek."
+    },
+    {
+        "name": "Baýdöwlet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Baý we döwletli ogul’’diýmek."
+    },
+    {
+        "name": "Bazarguly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bazar güni doglan ogul’’ diýmek."
+    },
+    {
+        "name": "Bazarmyra",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bazar güni doglan ogul myrat-maksadyna ýetsin’’ diýmek."
+    },
+    {
+        "name": "Baý",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Baý, döwletli bolsun’’ diýmek"
+    },
+    {
+        "name": "Baýbaba",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Döwletli, baý baba bolsun, uzak ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Baýgeldi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Baý, döwletli ogul geldi’’diýmek."
+    },
+    {
+        "name": "Badal",
+        "gender": "oglan",
+        "meaning": "  bu at oglanlara dakylýan at. Manysy ,,Erjel’’ diýmek."
+    },
+    {
+        "name": "Baetddin",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Diniň gymmatly sowgady, şöhlesi nury’’ diýmek."
+    },
+    {
+        "name": "Bazar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bazar güni doglan ogul’’ diýmek."
+    },
+    {
+        "name": "Bazarbaý",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bazar güni doglan döwletli ogul’’ diýmek. "
+    },
+    {
+        "name": "Bazargeldi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Bazar güni gelen ogul’’diýmek."
+    },
+    {
+        "name": "Bagmät",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagly, daňylgy, bagy bek ogla Muhammede ýar bolsun, uzak ýaşasyn’’ diýmek. "
+    },
+    {
+        "name": "Bagtgeldi",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Bagtly ogul dünýä indi’’ diýmek."
+    },
+    {
+        "name": "Bagtyýar",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Hemişe bagt ýar bolsun’’ diýmek. "
+    },
+    {
+        "name": "Bagşy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagşy ýaly atly-abraýly, ile ýaramly ogul bolsun’’ diýmek. "
+    },
+    {
+        "name": "Bagyr",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Aýypsyz, şikessiz’’diýmek. "
+    },
+    {
+        "name": "Babahan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Babasynyň han ogly’’ diýmek. "
+    },
+    {
+        "name": "Babaşir",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Uzak ýaşasyn we şir, ýolbars ýaly dogumly güýçli bolsun’’ diýmek. "
+    },
+    {
+        "name": "Babaýar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Babasyna hemra boljak we oňa hyzmat etjek ogul’’ diýmek. "
+    },
+    {
+        "name": "Babyr",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Ýolbars ýaly güýçli we batyr bolsun’’ diýmek."
+    },
+    {
+        "name": "Bagdan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Baharda bagda doglan ogul’’diýmek. "
+    },
+    {
+        "name": "Babamyrat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Babasynyň myradyny, arzuwyny hasyl eden ogul’’ diýmek."
+    },
+    {
+        "name": "Babanazar",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Babasynyň nazary düşen ogul’’ diýmek."
+    },
+    {
+        "name": "Babatagan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Baba bolsun,uzak ýaşasyn’’ diýmek. "
+    },
+    {
+        "name": "Baba",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,’’ diýmek "
+    },
+    {
+        "name": "Babaesen",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Aman-esen uzak ýaşasyn, baba bolsun’’diýmek."
+    },
+    {
+        "name": "Babaguly",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Babasynyň guly, hyzmatkäri’’ diýmek."
+    },
+    {
+        "name": "Babagylyç",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Babasynyň ady dakylan ogul uzak ýaşasyn’’ diýmek. "
+    },
+    {
+        "name": "Babadurdy",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Baba bolsun, uzak ýaşasyn’’ diýmek. "
+    },
+    {
+        "name": "Babakişi",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Babasynyň ornuny tutjak kişi’’ diýmek."
+    },
+    {
+        "name": "Babaly",
+        "gender": "oglan",
+        "meaning": "Manysy,,Babaly, babasyna gowşan ogul’’diýmek."
+    },
+    {
+        "name": "Aýaz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Aýazly gün doglan çaga’’ diýmek. "
+    },
+    {
+        "name": "Baba",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Babasynyň ady dakylan’’ diýmek."
+    },
+    {
+        "name": "Babaata",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Maşgala ýaşulysynyň ady dakylan ’’ diýmek. "
+    },
+    {
+        "name": "Babagarry",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Garry babasynyň ady dakylan ogul’’ diýmek. "
+    },
+    {
+        "name": "Babageldi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Babasy gelen güni doglan ogul’’diýmek. "
+    },
+    {
+        "name": "Aşyrnur",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Aşyr aýynda doglan nurana’’ diýmek."
+    },
+    {
+        "name": "Aşyrnyýaz",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda sowgat berlen çaga’’ diýmek."
+    },
+    {
+        "name": "Aşyrpolat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda doglan çaga polat ýaly berk bolsun, kesellemesin’’ diýmek."
+    },
+    {
+        "name": "Aşyrtagan",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda doglan çaga uzak ýaşasyn, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Aýaw",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Aýalýan ogul’’diýmek. "
+    },
+    {
+        "name": "Aşyrgylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda doglan ogul uzak ýaşasyn, ölmesin ýa-da ýiti, akylly bolsun’’ diýmek. "
+    },
+    {
+        "name": "Aşyrdöwlet",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Aşyr aýynda doglan ýigit döwletli bolsun’’ diýmek."
+    },
+    {
+        "name": "Aşyrdurdy",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Aşyr aýynda doglan çaga dursun, uzak ýaşasyn, ölmesin’’ diýmek. "
+    },
+    {
+        "name": "Aşyrmuhammet",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Aşyr aýynda doglan şanly-şöhratly, öwgüli ogul’’ diýmek."
+    },
+    {
+        "name": "Aşyrmyrat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara  dakylýan at. Manysy,,Aşyr aýynda doglan şanly-şöhratly ogul myrat-maksadyna ýetsin’’diýmek."
+    },
+    {
+        "name": "Aşyrbaý",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Aşyr aýynda doglan döwletli ogul’’ diýmek. "
+    },
+    {
+        "name": "Aşyrberdi",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda berlen ogul’’ diýmek."
+    },
+    {
+        "name": "Aşyrweli",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda doglan ogul bilimli, weli bolsun’’ diýmek."
+    },
+    {
+        "name": "Aşyrgeldi",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Aşyr aýynda gelen ogul’’ diýmek."
+    },
+    {
+        "name": "Aşyrguly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Aşyr aýynda doglan ogul’’diýmek. "
+    },
+    {
+        "name": "Aşgabat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Aşgabatda doglan’’ diýmek. "
+    },
+    {
+        "name": "Aşyk",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Durmuşy gözelligi söýýän’’ diýmek."
+    },
+    {
+        "name": "Aşykguly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Durmuşy, gözelligi söýýän ogul’’ diýmek. "
+    },
+    {
+        "name": "Aşyr",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Onluk’’ diýmek. "
+    },
+    {
+        "name": "Aşyraly",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy,,Aşyr aýynda doglan belent derejeli ogul’’diýmek."
+    },
+    {
+        "name": "Ahmetýar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Şanly-şöhratly şahs ýar bolsun’’ diýmek."
+    },
+    {
+        "name": "Ahun",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Molla uly molla, okumyş, mugallym’’ diýmek."
+    },
+    {
+        "name": "Açyl",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Keselden açyl, gutul’’ diýmek."
+    },
+    {
+        "name": "Açyldurdy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Keselinden açylsyn,dursun ölmesin’’ diýmek."
+    },
+    {
+        "name": "Açyldy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Keselinden açylsyn we myrat-maksadyna ýetsin’’diýmek."
+    },
+    {
+        "name": "Ahmedaly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Alynyň şöhratly, öwgüli kişisi’’ diýmek. "
+    },
+    {
+        "name": "Ahmedylla",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Allanyň şöhratly, öwgüli, kişisi’’ diýmek. "
+    },
+    {
+        "name": "Ahmet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Iňňän şöhratly,öwgüli’’ diýmek. "
+    },
+    {
+        "name": "Ahmetguly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Şanly –şöhratlynyň guly’’ diýmek. "
+    },
+    {
+        "name": "Ahmetnazar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Şanly-şöhratlynyň nazary bilen doglan ogul’’diýmek."
+    },
+    {
+        "name": "Atsyz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Ady ýok , at dakylmadyk,atsyz ogul’’ diýmek. "
+    },
+    {
+        "name": "Atçapar",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Ýigit bolup ýetişsin, at çapsyn’’ diýmek"
+    },
+    {
+        "name": "Afzal",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Örän ýagşy, ajaýyp’’ diýmek. "
+    },
+    {
+        "name": "Ahal",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Ahalda doglan’’ diýmek."
+    },
+    {
+        "name": "Ahally",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Ahalda doglan’’diýmek. "
+    },
+    {
+        "name": "Atabakan",
+        "gender": "oglan",
+        "meaning": "Manysy ,,At baksyn, edermen bolsun’’ diýmek."
+    },
+    {
+        "name": "Atabakar",
+        "gender": "oglan",
+        "meaning": " Manysy ,,At baksyn, edermen, çaparman ogul bolsun’’ diýmek. "
+    },
+    {
+        "name": "Atbaşy",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Ilden öňe saýlansyn’’ diýmek. "
+    },
+    {
+        "name": "Atajan",
+        "gender": "oglan",
+        "meaning": "Manysy ,,At janly, çydamly’’ diýmek. "
+    },
+    {
+        "name": "Atly",
+        "gender": "oglan",
+        "meaning": "Manysy,,Edermen ýigit bolup ýetişsin’’diýmek. "
+    },
+    {
+        "name": "Ataoraz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagtly ata bolsun’’ diýmek. "
+    },
+    {
+        "name": "Ataöwez",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň öwezine gelen ogul’’ diýmek. "
+    },
+    {
+        "name": "Ataseýit",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagtly ata bolsun’’ diýmek. "
+    },
+    {
+        "name": "Atahan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Abraýly ata bolsun’’ diýmek."
+    },
+    {
+        "name": "Ataş",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy,,Ot ýaly, ýiti ogul bolsun’’diýmek."
+    },
+    {
+        "name": "Atamyrat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň maksat-myrady, arzuwy’’ diýmek. "
+    },
+    {
+        "name": "Atamyş",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,At gazanan , adygan meşhur’’ diýmek. "
+    },
+    {
+        "name": "Atan",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Düýäniň bir görnüşi, iş maly’’ diýmek. "
+    },
+    {
+        "name": "Atanurly",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ady dakylan, nurana çaga’’ diýmek."
+    },
+    {
+        "name": "Atanyýaz",
+        "gender": "oglan",
+        "meaning": "Manysy,,Dilenip alnan ogul ata bolsun’’diýmek."
+    },
+    {
+        "name": "Atakişi",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasy ýaly kişi bolup ýetişsin’’ diýmek. "
+    },
+    {
+        "name": "Atakörpe",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ornuna gelen körpe ogul’’ diýmek. "
+    },
+    {
+        "name": "Ataly",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ornuna gelen çaga’’ diýmek. "
+    },
+    {
+        "name": "Atalyk",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Şazadalaryň terbiýeçisi’’ diýmek. "
+    },
+    {
+        "name": "Atameret",
+        "gender": "oglan",
+        "meaning": "Manysy,,Atasynyň ady dakylan we meret aýynda doglan ogul’’diýmek."
+    },
+    {
+        "name": "Atagurban",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň ady dakylan we gurban aýynda doglan ogul’’ýa-da ,,Gurban aýynda doglan ogul ata bolsun’’ diýmek. "
+    },
+    {
+        "name": "Atagylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň ady dakylan ogul uzak ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Atadurdy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň ady dakylan ogul dursun, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Atajan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň jany-jigeri ýa-da agasynyň ady dakylan söýgüli ogul’’ diýmek."
+    },
+    {
+        "name": "Atajuma",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Atasynyň ady dakylan we juma güni doglan ogul’’diýmek. "
+    },
+    {
+        "name": "Ataberdi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Atasynyň yzyny tutjak çagany berdi’’ýa-da ,,Ata boljak ogul doguldy’’ diýmek."
+    },
+    {
+        "name": "Ataweli",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ady dakylan ogul akylly weli bolsun’’ diýmek."
+    },
+    {
+        "name": "Atagarry",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Garry atasynyň ady dakylan ogul’’ diýmek."
+    },
+    {
+        "name": "Atageldi",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyňornuna gelen ogul’’ diýmek."
+    },
+    {
+        "name": "Ataguly",
+        "gender": "oglan",
+        "meaning": "Manysy,,Atasynyň guly, atasynyň ogly’’diýmek. "
+    },
+    {
+        "name": "Ata",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ady dakylan’’ diýmek. "
+    },
+    {
+        "name": "Atabaý",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ady dakylan ogul döwletli bolsun’’ diýmek."
+    },
+    {
+        "name": "Atabal",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Atasynyň ady dakylan süýji dilli çaga’’ diýmek."
+    },
+    {
+        "name": "Atabally",
+        "gender": "oglan",
+        "meaning": "Manysy ,, Atasynyň ady dakylan süýji dilli çaga’’ diýmek."
+    },
+    {
+        "name": "Atabeg",
+        "gender": "oglan",
+        "meaning": "Manysy,,Ata terbiýesini birinji beg bolup ýetişsin’’diýmek. "
+    },
+    {
+        "name": "Asrar",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Syrlar, gizlinler’’ diýmek. "
+    },
+    {
+        "name": "Astan",
+        "gender": "oglan",
+        "meaning": " Manysy ,,Astanababa öwlüýäsinden dilenip alnan’’ diýmek."
+    },
+    {
+        "name": "Asyl",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Asylly çaga’’ diýmek. "
+    },
+    {
+        "name": "Asylbek",
+        "gender": "oglan",
+        "meaning": "Manysy ,,Asylly we jany berk çaga’’ diýmek."
+    },
+    {
+        "name": "Asylmyrat",
+        "gender": "oglan",
+        "meaning": "Manysy,,Asylly ogul maksat-myradyna ýetsin’’diýmek."
+    },
+    {
+        "name": "Aryp",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bilimli, sowatly akylly’’ diýmek."
+    },
+    {
+        "name": "Asadulla-",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Allanyň şiri’’ diýmek."
+    },
+    {
+        "name": "Asameddin",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Diniň diregi daýanjy’’ diýmek."
+    },
+    {
+        "name": "Asgar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Kiçi, ýaşkiçi’’, ýa-da ,,Maşgalada körpe ogul’’ diýmek."
+    },
+    {
+        "name": "Asman",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,, Mertebesi belent’’diýmek."
+    },
+    {
+        "name": "Artyksapar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeninde artykmaç ösüntgi bolan we sapar aýynda doglan’’ diýmek."
+    },
+    {
+        "name": "Arça",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Arça ýaly berk bolsun, kynçylyga döz gelsin, uzak ýaşasyn’’ diýmek. "
+    },
+    {
+        "name": "Arçaweli",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Sagdyn berk janly we akylly ogul bolsun’’ diýmek."
+    },
+    {
+        "name": "Arçman",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Arçmanda doglan’’ diýmek."
+    },
+    {
+        "name": "Arçyn",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Oba kethudasy’’diýmek."
+    },
+    {
+        "name": "Artykgylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeni artykmaç ösüntgili ogul uzak ýaşasyn, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Artykmuhammet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeninde artykmaç ösüntgisi bolan öwgüli ogul’’ diýmek."
+    },
+    {
+        "name": "Artykmyrat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeni artykmaç ösüntgili ogul maksat-myradyna ýetsin’’ diýmek"
+    },
+    {
+        "name": "Artyknur",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeni artykmaç ösüntgili nurana ogul’’ diýmek."
+    },
+    {
+        "name": "Artyknyýaz ",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Bedeni artykmaç ösüntgili, dilenip alnan çaga’’diýmek."
+    },
+    {
+        "name": "Artyk",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeninde artykmaç ösüntgi bolan ogul’’ diýmek."
+    },
+    {
+        "name": "Artykbaý",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Artykmaç ösüntgi bilen doglan ogul döwletli bolsun’’ diýmek."
+    },
+    {
+        "name": "Artykweli",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeninde artykmaç ösüntgisi bolan akylly ogul’’ diýmek."
+    },
+    {
+        "name": "Artykguly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bedeninde artykmaç ösüntgisi bolan ogul’’ diýmek."
+    },
+    {
+        "name": "Artykgurban",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Bedeninde artykmaç ösüntgisi bolan we gurban aýynda doglan ogul’’diýmek."
+    },
+    {
+        "name": "Arzymet",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Arzyly we öwgä mynasyp ogul’’ diýmek."
+    },
+    {
+        "name": "Arzysähet",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Arzyly , arzuw edilip ýetilen we sähetli gün doglan ogul’’ diýmek."
+    },
+    {
+        "name": "Arpapolat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Aşly-nanly , jany hem polat ýaly berk bolsun’’ diýmek. "
+    },
+    {
+        "name": "Arryk",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Hor, çepiksi ogul’’ diýmek. "
+    },
+    {
+        "name": "Arslan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Arslan ýaly güýçli, batyr bolsun’’diýmek. "
+    },
+    {
+        "name": "Arzuwgeldi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Arzuwymyz amala aşdy’’diýmek. "
+    },
+    {
+        "name": "Apbas",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Gazaply,uruşgan’’ diýmek. "
+    },
+    {
+        "name": "Araz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagtly çaga’’ ýa-da ,,Oraza aýynda doglan çaga’’ diýmek. "
+    },
+    {
+        "name": "Arazbaý",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagtly we döwletli’’ diýmek. "
+    },
+    {
+        "name": "Arazgylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Bagtly ogul uzak ýaşasyn,ölmesin’’ diýmek "
+    },
+    {
+        "name": "Arazseýit",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Iňňän bagtly ogul’’diýmek. "
+    },
+    {
+        "name": "Annaýagşy",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ýagşy ogul’’ diýmek."
+    },
+    {
+        "name": "Annaýar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul doganlaryna ýar bolsun’’ diýmek. "
+    },
+    {
+        "name": "Aňňal",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Uzak ýaşasyn ölmesin’’ diýmek."
+    },
+    {
+        "name": "Aňňalgurt",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Uzak ýaşasyn, ölmesin, çydamly bolsun, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Annahan",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan at-abraýly ogul’’ diýmek."
+    },
+    {
+        "name": "Annaçary",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan dördünji ogul’’ diýmek. "
+    },
+    {
+        "name": "Annaesen",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan çaganyň başy esen bolsun’’diýmek. "
+    },
+    {
+        "name": "Annasary",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan nurana ogul’’ diýmek. "
+    },
+    {
+        "name": "Annaseýit",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan bagtly ogul’’ diýmek. "
+    },
+    {
+        "name": "Annasöýün",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan we Söýüniň ady dakylan ogul’’ diýmek."
+    },
+    {
+        "name": "Annasähet",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni, sähetli gün doglan’’ diýmek."
+    },
+    {
+        "name": "Annatagan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan üçünji çaga beýleki doganlaryna söýget bolsun, olary goldasyn’’diýmek."
+    },
+    {
+        "name": "Annaöwez",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan we öňki giden çaganyň ornuna, öwezine gelen ogul’’ diýmek. "
+    },
+    {
+        "name": "Annapolat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul çydamly bolsun’’ diýmek. "
+    },
+    {
+        "name": "Annarejep",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Rejep aýynyň anna güni doglan’’ diýmek. "
+    },
+    {
+        "name": "Annarozy",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan bagtly ogul’’ diýmek."
+    },
+    {
+        "name": "Annasapar",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara  dakylýan at. Manysy,,Sapar aýynda anna güni doglan ogul’’diýmek."
+    },
+    {
+        "name": "Annamyrat",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul maksat-myradyna ýetsin’’ diýmek. "
+    },
+    {
+        "name": "Annanazar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni nazar eden ogul’’ diýmek."
+    },
+    {
+        "name": "Annanepes",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Allanyň nepesi bilen anna güni doglan ogul’’ diýmek."
+    },
+    {
+        "name": "Annanyýaz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni sowgat berlen çaga’’ diýmek. "
+    },
+    {
+        "name": "Annaoraz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan bagtly ogul’’diýmek. "
+    },
+    {
+        "name": "Annakadyr",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Allanyň anna güni beren çagasy’’ diýmek. "
+    },
+    {
+        "name": "Annakerim",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan keremli, jomart, sahawatly ogul’’ diýmek. "
+    },
+    {
+        "name": "Annameret",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Meret aýynyň anna güni doglan’’ diýmek."
+    },
+    {
+        "name": "Annamuhammet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan öwgüli ogul’’diýmek."
+    },
+    {
+        "name": "Annagurban",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Gurban aýynyň anna güni doglan’’ diýmek "
+    },
+    {
+        "name": "Annagurt",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul gurt ýaly çydamly bolsun’’ diýmek. "
+    },
+    {
+        "name": "Annagylyç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul uzak ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Annadöwlet",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan döwletli ogul’’ diýmek. "
+    },
+    {
+        "name": "Annadurdy",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan çaga dursun, ölmesin’’diýmek."
+    },
+    {
+        "name": "Annagoç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan goç ogul’’ diýmek. "
+    },
+    {
+        "name": "Annageldi",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul’’ diýmek. "
+    },
+    {
+        "name": "Annaguly",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan ogul’’diýmek."
+    },
+    {
+        "name": "Annagarry",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan we ýaşuly garyndaşynyň ady dakylan’’ diýmek. "
+    },
+    {
+        "name": "Annaweli",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan ogul akylly, dana, weli bolsun’’ diýmek. "
+    },
+    {
+        "name": "Annabaýram",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Kamary aý hasaby boýunça 10-njy aýynyň anna güni doglan çaga’’ diýmek."
+    },
+    {
+        "name": "Annabegenç",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Anna güni doglup, ene-atasyny begendiren çaga’’ diýmek. "
+    },
+    {
+        "name": "Annaberdi",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan çaga’’ diýmek."
+    },
+    {
+        "name": "Annabäş",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Anna güni doglan bäşinji çaga’’ diýmek."
+    },
+    {
+        "name": "Annabäşim",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara  dakylýan at. Manysy,,Anna güni doglan bäşinji oglumyz’’diýmek. "
+    },
+    {
+        "name": "Amansähet",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Sähetli gün doglan ogul sag-aman ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Amantagan",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Sag-aman we uzak ýaşasyn, ölmesin’’ diýmek."
+    },
+    {
+        "name": "Amanşa",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Sag-aman ömür sürsün, at-abraýly, hökmürowan bolsun’’ diýmek."
+    },
+    {
+        "name": "Andalyp",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Türkmen şahyry Nurmuhammet Andalybyň edebi lakamy. Manysy,,Bilbil,hoşowaz’’diýmek."
+    },
+    {
+        "name": "Amanöwez",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Öňki ýoldan çaganyň ornuna gelen ogul sag-aman ýaşasyn, ölmesin’’ diýmek. "
+    },
+    {
+        "name": "Amansapar",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Sapar aýynda doglan çaga aman-sag ýaşasyn’’ ýa-da ,,Sapara gidenler sag-aman dolansyn’’ diýmek."
+    },
+    {
+        "name": "Amansary",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Sary, nurana ogul sag-aman ýaşasyn’’ diýmek. "
+    },
+    {
+        "name": "Amansaçly",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Saçly doglan çaga sag-aman we uzak ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Amanseýit",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Sag-aman ömür sürsin, bagtly bolsun’’ diýmek."
+    },
+    {
+        "name": "Amannazar",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Ogul sag-aman dünýä indi’’ diýmek."
+    },
+    {
+        "name": "Amannepes",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Allanyň nepesi bilen doglan çaga sag-aman ömür sürsün’’ diýmek. "
+    },
+    {
+        "name": "Amannur",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Nurana çaga sag-aman ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Amannyýaz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Dilenip alnan çaga sag-aman we uzak ýaşasyn, ölmesin’’ diýmek. "
+    },
+    {
+        "name": "Amanoraz",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy,,Sag-aman ýaşasyn we bagtly bolsun’’ diýmek. "
+    },
+    {
+        "name": "Amanmeret",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Meret aýynda doglan ogul sag-aman uzak ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Amanmuhammet",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Öwgüli ogul aman ýaşasyn’’ diýmek."
+    },
+    {
+        "name": "Amanmyrat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy,,Sag-aman ýaşap, myrat-maksadyna ýetsin’’ diýmek."
+    },
+    {
+        "name": "Aly",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Belent derejeli, ýokary’’ diýmek."
+    },
+    {
+        "name": "Alybaý",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Alynyň ady dakylan ogul döwletlibolsun’’ diýmek. "
+    },
+    {
+        "name": "Alybeg",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Alynyň ady dakylan abraýly, beg ogul’’ diýmek."
+    },
+    {
+        "name": "Alyguly",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Alynyň guly’’ diýmek."
+    },
+    {
+        "name": "Alym",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Ylymly, sowatly, bilimli,akylly, alym’’ diýmek."
+    },
+    {
+        "name": "Allaýar",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Çaga uzak ýaşasyn, ölmesin,oňa Alla ýar bolsun’’ diýmek."
+    },
+    {
+        "name": "Alpan",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Batyr, pälwan, iňňän güýçli we ýürekli’’ diýmek."
+    },
+    {
+        "name": "Alty",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Alty barmakly doglan’’ ýa-da ,,Altynjy ogul’’ diýmek."
+    },
+    {
+        "name": "Allanazar",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Allanyň nazar eden çagasy’’ diýmek. "
+    },
+    {
+        "name": "Allanepes",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Allanyň nepesi’’ diýmek."
+    },
+    {
+        "name": "Allanur",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Allanyň nury bilen doglan çaga’’ diýmek. "
+    },
+    {
+        "name": "Allamyrat",
+        "gender": "oglan",
+        "meaning": " bu at oglanlara dakylýan at. Manysy ,,Allanyň isläni’’ diýmek."
+    },
+    {
+        "name": "Agahan",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Agalarynyň hany’’ diýmek. "
+    },
+    {
+        "name": "Agaýusup",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. ,,Ýusup’’ sözüniň manysy ,,Köpelen’’ diýmek. "
+    },
+    {
+        "name": "Agzam",
+        "gender": "oglan",
+        "meaning": "bu at oglanlara dakylýan at. Manysy ,,Iň beýik görnükli’’ diýmek. "
+    },
+    {
+        "name": "EZIZ",
+        "gender": "oglan",
+        "meaning": "1.⁠ ⁠Allatagallanyň 99 adyndan biri bolup manysy - “gadyrdan, gymmatly; güýçli, gudratly”. 2.⁠ ⁠Türkmen dilende başga da manysy - “öwlat, mukaddes”. "
+    },
+    {
+        "name": "GUWANÇ",
+        "gender": "oglan",
+        "meaning": "Guwançly, begençli, söýgüli ogul bolsun. "
+    },
+    {
+        "name": "GURTMYRAT",
+        "gender": "oglan",
+        "meaning": "GURT (gurt ýaly çydamly, jany berk bolsun) + MYRAT (isleg, maksat, arzuw) atlaryndan meýdanan gelen at bolup manysy - “Jany berk bolsun, uzak ýaşasyn we myrat-maksadyna ýetsin”. "
+    },
+    {
+        "name": "GYLYÇ",
+        "gender": "oglan",
+        "meaning": " Gönümel manysy gylyç (ýarag) bolyp - gylyç ýaly gaty, kesgir, çalt oglan bolsun diýip goýulýan atdyr."
+    },
+    {
+        "name": "HAJY",
+        "gender": "oglan",
+        "meaning": "Arapçadan gelen at bolup Türkmençe manysy - “hajj, haç, hajy Mekgä haja baryp gelen”. Ilki haja gidip geleniň lakamy, tituly. Diňe ynanýanlar hajylary işan-mollalar, ruhanylar bilen deň saýypdyrlar, hatda çagasy bolmaýanlar (durmaýanlar) olardan pata, doga hem alypdyrlar. Soňra doglan çagalara hajy sözi bilen baglanyşykly at dakypdyrlar. "
+    },
+    {
+        "name": "IBRAGIM",
+        "gender": "oglan",
+        "meaning": " Arapçadan gelen at bolup Türkmençe manysy - “beýik(belent) mertebeli ata (kaka)”."
+    },
+    {
+        "name": "ILMYRAT",
+        "gender": "oglan",
+        "meaning": "IL (halk, ilat, ýürt) + MYRAT (isleg, arzuw, maksat) iki atdan meýdanan gelen at bolup manysy - “ýurdyň arzuwy, halkyň islegi”. "
+    },
+    {
+        "name": "ISA",
+        "gender": "oglan",
+        "meaning": "Ysa pygamberiň ady. Kuranda ady geçýän 28 pygamberlerden biriniň ady. "
+    },
+    {
+        "name": "JELIL",
+        "gender": "oglan",
+        "meaning": "Abduljelil, uly-Şohratly, Allahnyň guly, belent, meşhur. "
+    },
+    {
+        "name": "JEPBAR",
+        "gender": "oglan",
+        "meaning": "Abduljepbar, Taňrynyň guly, güýçli, kuwwatly, gudratly oglan bolsun. "
+    },
+    {
+        "name": "JEÝHUN",
+        "gender": "oglan",
+        "meaning": " Jeýhun derýasy ýaly joşsun."
+    },
+    {
+        "name": "JUMAGELDI",
+        "gender": "oglan",
+        "meaning": " JUMA (hepdänin bäşinji günü) + GELDI (gelmek, dogulmak) atlaryndan meýdana gelen at bolup manysy - hepdäniň bäşinji güni (Mukaddes güni)doglan, dünýä inen oglan."
+    },
+    {
+        "name": "KAKAMYRAT",
+        "gender": "oglan",
+        "meaning": "KAKA (kakasynyň ady dakylan ogul) + MYRAT (isleg, maksat, arzuw) atlaryndan meýdana gelen at bolup manysy - “Kakasynyň ady dakylan ogul myrat-maksadyna ýetsin”. "
+    },
+    {
+        "name": "KASYM",
+        "gender": "oglan",
+        "meaning": "Gadymy Türkmen ady bolup gönümel manysy - “paýlaşýan, bölüşýän, paýlaýan, bölýän”."
+    },
+    {
+        "name": "KEMAL",
+        "gender": "oglan",
+        "meaning": "Arapçadan gelen at bolup Türkmençe manysy - “kämillik, has artykmaçly, has jomartly”."
+    },
+    {
+        "name": "KERIM",
+        "gender": "oglan",
+        "meaning": "Arapçadan gelen at bolup Türkmençe manysy - “sahawatly, keremli, jomart, sahy, eli açyk”. (Allanyň epiteti) "
+    },
+    {
+        "name": "KERWEN",
+        "gender": "oglan",
+        "meaning": "Türkmen ady bolup gönümel manysy - “Üsti ýükli barýan tirkeşdirilen hatar (altynjy çagandan soňra goýulýan ad)”. "
+    },
+    {
+        "name": "KUWWAT",
+        "gender": "oglan",
+        "meaning": " Ekiz ogullara dakylýan adyň birisi (beýlekisi Kowus). Arapça giýas 1. “kömek, ýardam, hemaýat”, ýagny “kömekçi ogul” ; 2. “Ölçeme, deňeşdirme”, ýagny “ölçeýji, deňeşdiriji” (Allanyň epiteti)."
+    },
+    {
+        "name": "MAG(K)SAT",
+        "gender": "oglan",
+        "meaning": "Maksut adynyň üýtgän görnüşi bolup manysy - “arzuw edilen, arzuwly, köp garaşylan, gadyrdan”. "
+    },
+    {
+        "name": "MAGTYM",
+        "gender": "oglan",
+        "meaning": "1.⁠ ⁠Arapçadan gelen at bolup Türkmençe manysy - “hökmany ýagdaýda bolmasy gereken, hökmany, öňüni alyp bolmajak ýagdaý, gutulgysyz”. 2.⁠ ⁠Bir Türkmen taýpasynyň ady. Aga, ýolbaşçy-baştutan "
+    },
+    {
+        "name": "MAGTYMGULY",
+        "gender": "oglan",
+        "meaning": " 1.⁠ ⁠MAGTYM (hökmany) + GUL (gullukçy/hyzmatkär) iki atdan meýdana gelen bolup manysy - “hökmany hyzmatkär”. 2.⁠ ⁠Meşhur türkmen şahyry Magtymguly Pyragynyň ady."
+    },
+    {
+        "name": "MEKAN",
+        "gender": "oglan",
+        "meaning": "Parsça dilinden gelen at bolup manysy – ýer, ilatly nokat, etrap, diýar, ýürt, wezipe. "
+    },
+    {
+        "name": "MEÝLIS",
+        "gender": "oglan",
+        "meaning": " Parsçadan gelen at bolup Türkmen dilinde manysy – “meýil, arzuw, höwes”"
+    },
+    {
+        "name": "MUHAMMETALI",
+        "gender": "oglan",
+        "meaning": "MUHAMMET (iň köp öwülýän, öwgä mynasyp) + ALI (belent, beýik),Muhammet pygamberiň we onuň giýewiniň Aly atlarynyň birleşmesi bilen meýdana gelen atdyr."
+    },
+    {
+        "name": "MYRATBERDI",
+        "gender": "oglan",
+        "meaning": "MYRAT (isleg, maksat, arzuw) + BERDI (Alla tarapyndan berilen, sowgat edilen) atlaryndan meýdana gelen at bolup manysy - “Alla tarapyndan sowgat edilen ogul myrat-maksadyna ýetsin”. "
+    },
+    {
+        "name": "MÄLIKGULY",
+        "gender": "oglan",
+        "meaning": "MÄLIK (häkim, hökümdar) + GUL (gullukçy/hyzmatkär) iki atdan meýdanan gelen bolup manysy - “häkimiň hyzmatkäri”. "
+    },
+    {
+        "name": "NAGMAT",
+        "gender": "oglan",
+        "meaning": "Nygmat diýen adyňözgeren şekli."
+    },
+    {
+        "name": "NAZAR",
+        "gender": "oglan",
+        "meaning": " Garaýyş, esewan boluş."
+    },
+    {
+        "name": "NURALY",
+        "gender": "oglan",
+        "meaning": " Nur (ýagtylyk; gün şöhlesi; enwer) + Aly (Muhammet pygamberiň doganoglany we giýewiniň ady; belent derejeli, beýik, mehremetli, deňi taýy bolmadyk) – atlaryndan meýdana gelen at bolup manysy = «Alynyň nury; Aly halifanyň ady dakylan Nur ýaly owadan şöhle saçýan oglan»."
+    },
+    {
+        "name": "NURMYRAT",
+        "gender": "oglan",
+        "meaning": " Parsça Nur – “aýdyň, ýagty” + Myrat – “magsat, isleg, myrat” atlaryndan birleşdirilen Türkmen ady bolup manysy – “aýdyň isleg”."
+    },
+    {
+        "name": "ORAZ",
+        "gender": "oglan",
+        "meaning": "Gadymy Türkmen ady bolup gönümel manysy - “bagtly, baý, zehinli, akylly”.  2.⁠ ⁠“Oraza aýynda doglan”. "
+    },
+    {
+        "name": "PENA",
+        "gender": "oglan",
+        "meaning": "Maşgalanyň-iliň penasy bolsun."
+    },
+    {
+        "name": "PERHAT",
+        "gender": "oglan",
+        "meaning": "Arapçadan gelen at bolup Türkmençe manysy - “begençli; bagtly”. "
+    },
+    {
+        "name": "PERMAN",
+        "gender": "oglan",
+        "meaning": "Parsçadan gelen Türkmen ady bolup manysy – «emir, buýruk, höküm». "
+    },
+    {
+        "name": "PIRGULY",
+        "gender": "oglan",
+        "meaning": "PIR (goja, ýaşuly; şeýh; ruhy lider, halypa) + GULY (gul, hyzmatkär) atlaryndan meýdana gelen at bolup manysy - “Ýaşulynyň hyzmatkäri; käriniň halypasy/hünärmeni bolsun”. "
+    },
+    {
+        "name": "POLAT",
+        "gender": "oglan",
+        "meaning": "Polat ýaly berk janly we sagdyn bolsun. "
+    },
+    {
+        "name": "RAHIMBERDI",
+        "gender": "oglan",
+        "meaning": "RAHIM (Rehimli, şepagatly, mähriban, ýüregi ýuka) + BERDI Alla tarapyndan berilen, sowgat edilen) atdan meýdanan gelen at bolup manysy – “Rehimli bolan Allanyň sowgat beren çagasy”. "
+    },
+    {
+        "name": "RAHIMGULY",
+        "gender": "oglan",
+        "meaning": "RAHIM (Rehimli, şepagatly, mähriban, ýüregi ýuka) + GULY (gul, gullukçy/hyzmatkär) atdan meýdanan gelen at bolup manysy – “Rehimli bolan Allanyň wepaly guly”. "
+    },
+    {
+        "name": "RAHMAN",
+        "gender": "oglan",
+        "meaning": "Abdulrahman(Allahnyň guly). Rehimli. "
+    },
+    {
+        "name": "RAHYM",
+        "gender": "oglan",
+        "meaning": "Abdulrahym(Allahnyň guly). Rehimli. "
+    },
+    {
+        "name": "REJEP",
+        "gender": "oglan",
+        "meaning": " Rejep. Gamary aýyň 7-njisi - “sejde edilýän wagt, mukaddes aý”."
+    },
+    {
+        "name": "RESUL",
+        "gender": "oglan",
+        "meaning": "Ilçi, pygambar. "
+    },
+    {
+        "name": "RESULBERDI",
+        "gender": "oglan",
+        "meaning": "RESUL (Ilçi, pygambar) + BERDI (Alla tarapyndan berilen, sowgat edilen) atdan meýdanan gelen at bolup manysy - “Allanyň ýerdäki ilçisiniň bereni”. "
+    },
+    {
+        "name": "ROZYMYRAT",
+        "gender": "oglan",
+        "meaning": "ROZY ( 1. pars: kemala gelen; 2. Oraza aýy) + MYRAT (isleg, maksat, arzuw) atdan meýdanan gelen at bolup manysy - “Oraza aýynda doglan ogul myrat-maksadyna ýetsin”. "
+    },
+    {
+        "name": "RÜSTEM",
+        "gender": "oglan",
+        "meaning": "Parsçadan gelen at bolup Türkmençe manysy - “kuwwatly,güýçli; pälwan; edermen”. "
+    },
+    {
+        "name": "SOLTAN",
+        "gender": "oglan",
+        "meaning": "Saltan, padyşah, häkim, atly-abraýly. "
+    },
+    {
+        "name": "SÄHET",
+        "gender": "oglan",
+        "meaning": "Arap dilinden gelen Said/Saýd adynyň bir görnüşi bolup manysy - “bagtly jenap (howandar)”."
+    },
+    {
+        "name": "SÜLEÝMAN",
+        "gender": "oglan",
+        "meaning": "Ýer ýüzündäki hemme haýwanlaryň dilini aňlan pygambar. "
+    },
+    {
+        "name": "WELMYRAT",
+        "gender": "oglan",
+        "meaning": " “Allanyň dosty ýa-da akylly ogul myrat-maksadyna ýetsin”."
+    },
+    {
+        "name": "WEPA",
+        "gender": "oglan",
+        "meaning": "Arapçadan gelen at bolup Türkmençe manysy - “ynamlyk, wepalylyk, ynanç”. "
+    },
+    {
+        "name": "YHLAS",
+        "gender": "oglan",
+        "meaning": "Arapçadan gelen at bolup Türkmençe manysy - “akýüreklilik, isleg, arzuw”. "
+    },
+    {
+        "name": "YSMAÝYL",
+        "gender": "oglan",
+        "meaning": " Ýewreýçe ýisma el “Hudaý eşidip dur”. Töwratdaky rowaýata görä, Ybraýym pygamberiň Hajar diýen aýalynyň dilegini Hudaý eşidip (kabul edip), oňa Ysmaýyl diýen ogly sowgat iberipdir."
+    },
+    {
+        "name": "ÝAKUB",
+        "gender": "oglan",
+        "meaning": " Arapçadan gelen at bolup Türkmençe manysy - “yzy bilen barýan”. Kuranda ady geçýän 28 pygamberlerden biriniň ady."
+    },
+    {
+        "name": "ÝUSUP",
+        "gender": "oglan",
+        "meaning": "Ýusup-Ýakup pygambaryň ady. "
+    },
+    {
+        "name": "ŞAGELDI",
+        "gender": "oglan",
+        "meaning": "ŞA (hökümli, ygtyýarly) + GELDI (gelmek, dogulmak, dünýä inmek) atlaryndan meýdanan gelen at bolup manysy - “Belent derejeli ogul geldi, Şa gelende doglan”. "
+    },
+    {
+        "name": "ŞAMUHAMMET",
+        "gender": "oglan",
+        "meaning": " ŞA (hökümli, ygtyýarly) + MUHAMMET (iň köp öwülýän, öwgä mynasyp) atlaryndan meýdana gelen at bolup manysy - “Hökümli Muhammet, iň köp öwgä mynasyp hökümli oglan bolsun”."
+    },
+    {
+        "name": "ŞÖHRAT",
+        "gender": "oglan",
+        "meaning": "Şöhratly, at-abraýly, meşhur oglan bolsun."
+    }
+
+
+    
+]
