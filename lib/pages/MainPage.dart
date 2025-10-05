@@ -9,6 +9,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String tab1 = 'all names';
+    String tab2 = 'favorites';
     return DefaultTabController(
       initialIndex: 1,
       length: 2,
