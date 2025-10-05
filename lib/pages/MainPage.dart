@@ -3,10 +3,12 @@ import 'package:name_meaning/pages/All.dart';
 import 'package:name_meaning/pages/Favorites.dart';
 
 class MainPage extends StatelessWidget {
+  
   const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    String tab1 = 'all names';
     return DefaultTabController(
       initialIndex: 1,
       length: 2,
