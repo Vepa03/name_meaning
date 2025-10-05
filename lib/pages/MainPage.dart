@@ -12,7 +12,7 @@ class MainPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Turkmen Names"),
+          title: Text("Turkmen Names", style: TextStyle(fontFamily: "Lucky"),),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
