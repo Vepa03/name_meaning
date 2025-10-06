@@ -21,7 +21,7 @@ class _AllState extends State<All> {
 
   Future<void> _loadNames() async {
     final String response =
-        await rootBundle.loadString('assets/data/boys.json');
+        await rootBundle.loadString('assets/data/names.json');
     final List data = jsonDecode(response);
     setState(() {
       _items = data.map((e) => TurkmenName.fromJson(e)).toList();

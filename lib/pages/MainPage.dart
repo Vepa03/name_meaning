@@ -8,8 +8,6 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String tab1 = 'all names';
-    String tab2 = 'favorites';
     return DefaultTabController(
       initialIndex: 1,
       length: 2,
@@ -27,6 +25,7 @@ class MainPage extends StatelessWidget {
           centerTitle: true,
           bottom: TabBar(
             labelColor: Colors.white,
+            labelStyle: TextStyle( fontFamily: "Roboto"),
             unselectedLabelColor: Colors.grey,
             indicatorColor: Colors.white,
             tabs: <Widget>[
