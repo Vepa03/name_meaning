@@ -2,8 +2,9 @@ class TurkmenName {
   final String name;
   final String meaning;
   final String gender;
+  bool isLiked;
 
-  TurkmenName({required this.name, required this.meaning, required this.gender});
+  TurkmenName({required this.name, required this.meaning, required this.gender, this.isLiked = false});
 
   factory TurkmenName.fromJson(Map<String, dynamic> json) {
     return TurkmenName(
@@ -17,5 +18,6 @@ class TurkmenName {
         'name': name,
         'meaning': meaning,
         'gender' : gender,
+        'isliked': isLiked
       };
 }

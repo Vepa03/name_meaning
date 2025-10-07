@@ -12,6 +12,7 @@ class All extends StatefulWidget {
 
 class _AllState extends State<All> {
   List<TurkmenName> _items = [];
+  Set<String> _likedNames = {};
 
   @override
   void initState() {
@@ -30,6 +31,7 @@ class _AllState extends State<All> {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     if (_items.isEmpty) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -43,7 +45,13 @@ class _AllState extends State<All> {
           final item = _items[index];
           return ListTile(
             title: Text(item.name),
-            trailing: const Icon(Icons.chevron_right),
+            trailing: GestureDetector(
+              onTap: (){
+                setState(() {
+                  item.isLiked = !item.isLiked;
+                });
+              },
+              child: Image.asset(item.isLiked? "assets/icons/like_red.png" : "assets/icons/like.png", width: width*0.065,)),
             onTap: () {
               Navigator.push(
                 context,
