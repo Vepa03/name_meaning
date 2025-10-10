@@ -105,8 +105,7 @@ class _AllState extends State<All> {
                   textInputAction: TextInputAction.search,
                   decoration: InputDecoration(
                     hintText: 'Gözle...',
-                    hintStyle: TextStyle(fontSize: width*0.045),
-                    prefixIcon: Icon(Icons.search, size: width*0.06,),
+                    prefixIcon: Icon(Icons.search),
                     suffixIcon: _query.isEmpty
                         ? null
                         : IconButton(
@@ -115,7 +114,7 @@ class _AllState extends State<All> {
                               _searchCtrl.clear();
                               setState(() => _query = '');
                             },
-                            icon: Icon(Icons.clear, size: width*0.06,),
+                            icon: Icon(Icons.clear),
                           ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -135,19 +134,19 @@ class _AllState extends State<All> {
                   PopupMenuItem(
                     value: SortMode.az,
                     child: Row(
-                      children: [Icon(Icons.sort_by_alpha, size: width*0.06,), SizedBox(width: 8), Text('A → Z', style: TextStyle(fontSize: width*0.04),)],
+                      children: [Icon(Icons.sort_by_alpha), SizedBox(width: 8), Text('A → Z', )],
                     ),
                   ),
                   PopupMenuItem(
                     value: SortMode.za,
                     child: Row(
-                      children: [Icon(Icons.sort_by_alpha, size: width*0.06,), SizedBox(width: 8), Text('Z → A', style: TextStyle(fontSize: width*0.04))],
+                      children: [Icon(Icons.sort_by_alpha), SizedBox(width: 8), Text('Z → A', )],
                     ),
                   ),
                   PopupMenuItem(
                     value: SortMode.favoritesFirst,
                     child: Row(
-                      children: [Icon(Icons.favorite, color: Colors.red, size: width*0.06,), SizedBox(width: 8), Text('ilki halanlarym',style: TextStyle(fontSize: width*0.035))],
+                      children: [Icon(Icons.favorite, color: Colors.red, ), SizedBox(width: 8), Text('ilki halanlarym')],
                     ),
                   ),
                 ],
@@ -157,7 +156,7 @@ class _AllState extends State<All> {
                     border: Border.all(color: Theme.of(context).dividerColor),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Icon(Icons.sort, size: width*0.07,),
+                  child: Icon(Icons.sort),
                 ),
               ),
             ],
@@ -182,7 +181,7 @@ class _AllState extends State<All> {
                     final item = items[index];
                     return ListTile(
                       key: ValueKey(item.name),
-                      title: Text(item.name, style: TextStyle(fontSize: width*0.045),),
+                      title: Text(item.name,),
                       trailing: InkWell(
                         borderRadius: BorderRadius.circular(24),
                         onTap: () => widget.onToggleLike(item),
@@ -190,7 +189,6 @@ class _AllState extends State<All> {
                           padding: const EdgeInsets.all(6.0),
                           child: Icon(
                             item.isLiked ? Icons.favorite  : Icons.favorite_border,
-                            size: width * 0.065,
                             color: item.isLiked ? Colors.red : null,
                           ),
                         ),

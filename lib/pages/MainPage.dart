@@ -74,11 +74,12 @@ class _MainPageState extends State<MainPage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Türkmen atlar", style: TextStyle(fontFamily: "Lucky", fontSize: width*0.075)),
+          title: Text("Türkmen atlar", style: TextStyle(fontFamily: "Lucky", fontSize: 25
+          )),
           centerTitle: true,
           bottom: TabBar(
             labelColor: Colors.white,
-            labelStyle: TextStyle(fontSize: width*0.04, fontFamily: "Roboto"),
+            labelStyle: TextStyle( fontFamily: "Roboto"),
             unselectedLabelColor: Colors.grey,
             indicatorColor: Colors.white,
             tabs: [

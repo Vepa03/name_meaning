@@ -7,8 +7,10 @@ class TurkmenName {
   TurkmenName({required this.name, required this.meaning, required this.gender, this.isLiked = false});
 
   factory TurkmenName.fromJson(Map<String, dynamic> json) {
+    final rawName = json['name'] ?? '';
+    final formatted = rawName.isNotEmpty ? rawName[0].toUpperCase() + rawName.substring(1).toLowerCase() : rawName;
     return TurkmenName(
-      name: json['name'] as String,
+      name: formatted,
       meaning: json['meaning'] as String,
       gender: json['gender'] as String,
     );

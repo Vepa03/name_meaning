@@ -94,8 +94,7 @@ class _FavoritesState extends State<Favorites> {
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
                 hintText: 'Gözle ...',
-                prefixIcon: Icon(Icons.search, size: width*0.06,),
-                hintStyle: TextStyle(fontSize: width*0.045),
+                prefixIcon: Icon(Icons.search),
                 suffixIcon: _query.isEmpty
                     ? null
                     : IconButton(
@@ -104,7 +103,7 @@ class _FavoritesState extends State<Favorites> {
                           _searchCtrl.clear();
                           setState(() => _query = '');
                         },
-                        icon: Icon(Icons.clear, size: width*0.06,),
+                        icon: Icon(Icons.clear),
                       ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -122,13 +121,13 @@ class _FavoritesState extends State<Favorites> {
               PopupMenuItem(
                 value: FavSortMode.az,
                 child: Row(
-                  children: [Icon(Icons.sort_by_alpha, size: width*0.06,), SizedBox(width: 8), Text('A → Z', style: TextStyle(fontSize: width*0.04),)],
+                  children: [Icon(Icons.sort_by_alpha, ), SizedBox(width: 8), Text('A → Z', )],
                 ),
               ),
               PopupMenuItem(
                 value: FavSortMode.za,
                 child: Row(
-                  children: [Icon(Icons.sort_by_alpha, size: width*0.06,), SizedBox(width: 8), Text('Z → A',  style: TextStyle(fontSize: width*0.04))],
+                  children: [Icon(Icons.sort_by_alpha, ), SizedBox(width: 8), Text('Z → A',  )],
                 ),
               ),
             ],
@@ -138,7 +137,7 @@ class _FavoritesState extends State<Favorites> {
                 border: Border.all(color: Theme.of(context).dividerColor),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Icon(Icons.sort,  size: width*0.07,),
+              child: Icon(Icons.sort, ),
             ),
           ),
         ],
@@ -178,7 +177,6 @@ class _FavoritesState extends State<Favorites> {
                   padding: const EdgeInsets.all(6.0),
                   child: Icon(
                     Icons.favorite,
-                    size: width * 0.065,
                     color: Colors.red,
                   ),
                 ),
@@ -186,7 +184,7 @@ class _FavoritesState extends State<Favorites> {
 
               return ListTile(
                 key: ValueKey(item.name),
-                title: Text(item.name, style: TextStyle(fontSize: width*0.045),),
+                title: Text(item.name, ),
                 trailing: widget.onToggleLike == null
                     ? Tooltip(message: 'Pasif (onToggleLike ekle)', child: likeButton)
                     : likeButton,
