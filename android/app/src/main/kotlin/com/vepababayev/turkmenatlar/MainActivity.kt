@@ -1,4 +1,4 @@
-package com.example.name_meaning
+package com.vepababayev.turkmenatlar
 
 import io.flutter.embedding.android.FlutterActivity
 

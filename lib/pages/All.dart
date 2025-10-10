@@ -89,7 +89,6 @@ class _AllState extends State<All> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     final items = _visibleItems;
 
     return Column(

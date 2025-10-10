@@ -80,7 +80,6 @@ class _FavoritesState extends State<Favorites> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     final favorites = _favoritesVisible;
 
     // Üst kontrol barı

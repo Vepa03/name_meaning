@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:name_meaning/pages/MainPage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp
+  ]);
   runApp(const MyApp());
 }
 
@@ -18,6 +24,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
           foregroundColor: Colors.white
         ),
+        popupMenuTheme: PopupMenuThemeData(color: Colors.white),
         scaffoldBackgroundColor: Colors.white
 
       ),

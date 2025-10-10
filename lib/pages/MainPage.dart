@@ -63,7 +63,6 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
     
     if (_loading) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
