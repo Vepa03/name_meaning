@@ -1,74 +1,216 @@
-import 'dart:convert';
+// All.dart
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:name_meaning/pages/model/TurkmenName.dart';
 
+enum SortMode { az, za, favoritesFirst }
+
 class All extends StatefulWidget {
-  const All({super.key});
+  final List<TurkmenName> items;
+  final ValueChanged<TurkmenName> onToggleLike;
+
+  const All({
+    super.key,
+    required this.items,
+    required this.onToggleLike,
+  });
 
   @override
   State<All> createState() => _AllState();
 }
 
 class _AllState extends State<All> {
-  List<TurkmenName> _items = [];
-  Set<String> _likedNames = {};
+  final TextEditingController _searchCtrl = TextEditingController();
+  Timer? _debounce;
+  String _query = '';
+  String _genderFilter = 'Tümü';
+  SortMode _sortMode = SortMode.az;
 
   @override
   void initState() {
     super.initState();
-    _loadNames();
+    _searchCtrl.addListener(_onSearchChanged);
   }
 
-  Future<void> _loadNames() async {
-    final String response =
-        await rootBundle.loadString('assets/data/names.json');
-    final List data = jsonDecode(response);
-    setState(() {
-      _items = data.map((e) => TurkmenName.fromJson(e)).toList();
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    _searchCtrl.dispose();
+    super.dispose();
+  }
+
+  void _onSearchChanged() {
+    _debounce?.cancel();
+    _debounce = Timer(const Duration(milliseconds: 250), () {
+      if (!mounted) return;
+      setState(() => _query = _searchCtrl.text.trim());
     });
+  }
+
+  List<TurkmenName> get _visibleItems {
+    Iterable<TurkmenName> list = widget.items.where((e) {
+      if (_genderFilter == 'Tümü') return true;
+      final g = e.gender.toLowerCase();
+      if (_genderFilter == 'Erkek') {
+        return g.startsWith('e') || g.contains('erkek') || g.startsWith('m');
+      }
+      if (_genderFilter == 'Kadın') {
+        return g.startsWith('k') || g.contains('kad') || g.startsWith('f');
+      }
+      return true;
+    });
+
+    if (_query.isNotEmpty) {
+      final q = _query.toLowerCase();
+      list = list.where((e) =>
+          e.name.toLowerCase().contains(q) ||
+          e.meaning.toLowerCase().contains(q));
+    }
+
+    final sorted = list.toList();
+    int cmp(TurkmenName a, TurkmenName b) =>
+        a.name.toLowerCase().compareTo(b.name.toLowerCase());
+    switch (_sortMode) {
+      case SortMode.az:
+        sorted.sort(cmp);
+        break;
+      case SortMode.za:
+        sorted.sort((a, b) => cmp(b, a));
+        break;
+      case SortMode.favoritesFirst:
+        sorted.sort((a, b) {
+          if (a.isLiked != b.isLiked) return a.isLiked ? -1 : 1;
+          return cmp(a, b);
+        });
+        break;
+    }
+    return sorted;
   }
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    if (_items.isEmpty) {
-      return const Center(child: CircularProgressIndicator());
-    }
+    final width = MediaQuery.of(context).size.width;
+    final items = _visibleItems;
 
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: ListView.separated(
-        itemCount: _items.length,
-        separatorBuilder: (_, __) => const Divider(height: 1),
-        itemBuilder: (context, index) {
-          final item = _items[index];
-          return ListTile(
-            title: Text(item.name),
-            trailing: GestureDetector(
-              onTap: (){
-                setState(() {
-                  item.isLiked = !item.isLiked;
-                });
-              },
-              child: Image.asset(item.isLiked? "assets/icons/like_red.png" : "assets/icons/like.png", width: width*0.065,)),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => NameDetailPage(item: item),
+    return Column(
+      children: [
+        // Üst Kontroller
+        Padding(
+          padding: const EdgeInsets.fromLTRB(15, 12, 15, 6),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _searchCtrl,
+                  textInputAction: TextInputAction.search,
+                  decoration: InputDecoration(
+                    hintText: 'Gözle...',
+                    hintStyle: TextStyle(fontSize: width*0.045),
+                    prefixIcon: Icon(Icons.search, size: width*0.06,),
+                    suffixIcon: _query.isEmpty
+                        ? null
+                        : IconButton(
+                            tooltip: 'Temizle',
+                            onPressed: () {
+                              _searchCtrl.clear();
+                              setState(() => _query = '');
+                            },
+                            icon: Icon(Icons.clear, size: width*0.06,),
+                          ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    isDense: true,
+                  ),
                 ),
-              );
-            },
-          );
-        },
-      ),
+              ),
+              const SizedBox(width: 10),
+              // (İstersen cinsiyet filtre dropdown’unu geri aç)
+              const SizedBox(width: 8),
+              PopupMenuButton<SortMode>(
+                tooltip: 'Sırala',
+                initialValue: _sortMode,
+                onSelected: (mode) => setState(() => _sortMode = mode),
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    value: SortMode.az,
+                    child: Row(
+                      children: [Icon(Icons.sort_by_alpha, size: width*0.06,), SizedBox(width: 8), Text('A → Z', style: TextStyle(fontSize: width*0.04),)],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: SortMode.za,
+                    child: Row(
+                      children: [Icon(Icons.sort_by_alpha, size: width*0.06,), SizedBox(width: 8), Text('Z → A', style: TextStyle(fontSize: width*0.04))],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: SortMode.favoritesFirst,
+                    child: Row(
+                      children: [Icon(Icons.favorite, color: Colors.red, size: width*0.06,), SizedBox(width: 8), Text('ilki halanlarym',style: TextStyle(fontSize: width*0.035))],
+                    ),
+                  ),
+                ],
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Theme.of(context).dividerColor),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Icon(Icons.sort, size: width*0.07,),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 4),
+
+        // Liste
+        Expanded(
+          child: items.isEmpty
+              ? ListView(
+                  children: const [
+                    SizedBox(height: 80),
+                    Center(child: Text('Tapylmady')),
+                  ],
+                )
+              : ListView.separated(
+                  padding: const EdgeInsets.all(15.0),
+                  itemCount: items.length,
+                  separatorBuilder: (_, __) => const Divider(height: 1),
+                  itemBuilder: (context, index) {
+                    final item = items[index];
+                    return ListTile(
+                      key: ValueKey(item.name),
+                      title: Text(item.name, style: TextStyle(fontSize: width*0.045),),
+                      trailing: InkWell(
+                        borderRadius: BorderRadius.circular(24),
+                        onTap: () => widget.onToggleLike(item),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Icon(
+                            item.isLiked ? Icons.favorite  : Icons.favorite_border,
+                            size: width * 0.065,
+                            color: item.isLiked ? Colors.red : null,
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => NameDetailPage(item: item),
+                          ),
+                        );
+                      },
+                    );
+                  },
+                ),
+        ),
+      ],
     );
   }
 }
-
-
-
 
 class NameDetailPage extends StatelessWidget {
   final TurkmenName item;
@@ -76,41 +218,47 @@ class NameDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(item.name)),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            Wrap(
+              spacing: 12,
+              crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text(item.name, style: TextStyle(fontSize: 22, ),),
-                SizedBox(width: 20.0,),
+                Text(item.name, style: theme.textTheme.titleLarge),
                 Container(
                   decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  color: Colors.black
+                    borderRadius: BorderRadius.circular(7),
+                    color: Colors.black,
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  child: Text(
+                    item.gender,
+                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
                 ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 4, bottom: 4),
-                    child: Text(item.gender, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white )),
-                  ))
               ],
             ),
-            SizedBox(height: 15.0,),
+            const SizedBox(height: 15),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
-                color: const Color.fromARGB(255, 228, 226, 226) 
+                color: const Color(0xFFE4E2E2),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Text(item.meaning, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
-              ))
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                item.meaning,
+                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+              ),
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }
-
