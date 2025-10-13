@@ -3196,10 +3196,62 @@
         "meaning": "Zöhre - ýyldyz ady, Aýal-gyz atlarynda bu söz 'parlak, röwşen, ýalkymly , mähriban' ýaly manylary aňlatýar "
     },
     {
-        "name": "Zöhre",
+        "name": "Zöhrenur",
         "gender": "gyz",
         "meaning": "Ýalkym saçýan görmegeý gyz "
+    },
+    {
+        "name": "Zeýnepnur",
+        "gender": "gyz",
+        "meaning": "Zeynep — bu at arapça “zeyneb” sözünden gelip çykýar, manysy “bezege, owadanja zat, gymmatly daş (mäkik)” diýmekdir. Türkmençe düşündirişde “Zeynep” diýlende gözelligi, näzikligi we gymmatlylygy aňladýar. Nur — bu söz hem arapça gelip, “ýagtylyk”, “şöhle”, “nur” diýmekdir. Türkmen dilinde bu söz köplenç ruhy ýagtylyk, päklik, ýagşylyk manysynda ulanylýar. “Gözelligi we ýagtylygy bilen şöhle saçýan gyz”"
+    },
+    {
+        "name": "Zeýnep",
+        "gender": "gyz",
+        "meaning": "Muhammet pygamberiň gyzynyň ady bolany üçin, ol gündogar antroponimiýasynda giň ýaýradyr"
+    },
+    {
+        "name": "Hasan",
+        "gender": "oglan",
+        "meaning": "Köplenç ekiz ogullarynyň birisine dakylýan at (beýlekisi Huseýin) , Manysy 'gözel, görmegeý, owadan' diymek"
+    },
+    {
+        "name": "Nihal",
+        "gender": "gyz",
+        "meaning": "“täze ösüp çykýan agaç ýa-da şahajyk ýaly dirilik doly gyz” manysyny berýär. Şonuň üçin adyň manysy “ýaş, ýaşaýyş doly, umytly, dirilik nyşany” diýip düşündirilýär"
+    },
+
+    {
+        "name": "Yslam",
+        "gender": "oglan",
+        "meaning": "Islam 'boýun egen, yslamy kabul eden' diymek"
+    },
+    {
+        "name": "Yslamguly",
+        "gender": "oglan",
+        "meaning": "Yslamyň diniň guly"
+    },
+    {
+        "name": "Berdigylyç",
+        "gender": "oglan",
+        "meaning": "Allanyň beren çagasy berk bolsun, ölmesin, uzak ýaşasyn"
+    },
+    {
+        "name": "Azym",
+        "gender": "oglan",
+        "meaning": "'beýik' (Allanyň epiteti) '"
+    },
+    {
+        "name": "Azymberdi",
+        "gender": "oglan",
+        "meaning": "Beyik (ýagny Alla) berdi"
+    },
+    {
+        "name": "Atda",
+        "gender": "oglan",
+        "meaning": "Ata sözi bilen gelýän goşma atlarynyň gysgadylan görnüşi"
     }
+    
 
 
 
