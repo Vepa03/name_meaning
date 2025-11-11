@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:name_meaning/pages/Settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:name_meaning/pages/model/TurkmenName.dart';
 
@@ -73,6 +74,11 @@ class _MainPageState extends State<MainPage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          leading: GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> Settings()));
+            },
+            child: Icon(Icons.settings)),
           title: Text("Türkmen atlar", style: TextStyle(fontFamily: "Lucky", fontSize: 25
           )),
           centerTitle: true,
