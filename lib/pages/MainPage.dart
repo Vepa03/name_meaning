@@ -76,7 +76,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           leading: GestureDetector(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> Settings()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> SettingsPage()));
             },
             child: Icon(Icons.settings)),
           title: Text("Türkmen atlar", style: TextStyle(fontFamily: "Lucky", fontSize: 25
