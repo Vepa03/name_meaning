@@ -190,7 +190,7 @@ class _FavoritesState extends State<Favorites> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => NameDetailPage(item: item)),
+                    MaterialPageRoute(builder: (_) => NameDetailPage(item: item, onToggleLike: widget.onToggleLike,)),
                   );
                 },
               );
@@ -202,15 +202,50 @@ class _FavoritesState extends State<Favorites> {
   }
 }
 
-class NameDetailPage extends StatelessWidget {
-  final TurkmenName item;
-  const NameDetailPage({super.key, required this.item});
 
+class NameDetailPage extends StatefulWidget {
+  final TurkmenName item;
+  final ValueChanged<TurkmenName>? onToggleLike;
+
+  const NameDetailPage({
+    super.key,
+    required this.item,
+    this.onToggleLike,
+  });
+
+  @override
+  State<NameDetailPage> createState() => _NameDetailPageState();
+}
+
+class _NameDetailPageState extends State<NameDetailPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final item = widget.item;
+
     return Scaffold(
       appBar: AppBar(title: Text(item.name)),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          item.isLiked ? Icons.favorite : Icons.favorite_border,
+          color: item.isLiked ? Colors.red : null,
+        ),
+        onPressed: () {
+          // Üst seviyeye haber ver (örneğin SharedPreferences kaydeden fonksiyon)
+          if (widget.onToggleLike != null) {
+            widget.onToggleLike!(item);
+          } else {
+            // Yine de lokal olarak değişsin istiyorsan:
+            setState(() {
+              item.isLiked = !item.isLiked;
+            });
+            return;
+          }
+
+          // Bu sayfadaki ikonu güncelle
+          setState(() {});
+        },
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
@@ -226,10 +261,17 @@ class NameDetailPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(7),
                     color: Colors.black,
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
                   child: Text(
                     item.gender,
-                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
@@ -243,7 +285,10 @@ class NameDetailPage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Text(
                 item.meaning,
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ],

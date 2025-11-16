@@ -9,13 +9,13 @@ class SettingsPage extends StatelessWidget {
     final scale = context.watch<FontScaleProvider>().scale;
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Ayarlar")),
+      appBar: AppBar(title: const Text("Sazla")),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Yazı boyutu"),
+            const Text("Teks ululygy sazla"),
             Slider(
               value: scale,
               min: 0.8,
@@ -26,8 +26,6 @@ class SettingsPage extends StatelessWidget {
                 context.read<FontScaleProvider>().setScale(value);
               },
             ),
-            const SizedBox(height: 8),
-            const Text("Örnek metin: Salam dünýä 🌍"),
           ],
         ),
       ),

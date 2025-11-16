@@ -196,7 +196,7 @@ class _AllState extends State<All> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => NameDetailPage(item: item),
+                            builder: (_) => NameDetailPage(item: item, onToggleLike: widget.onToggleLike,),
                           ),
                         );
                       },
@@ -209,15 +209,39 @@ class _AllState extends State<All> {
   }
 }
 
-class NameDetailPage extends StatelessWidget {
+class NameDetailPage extends StatefulWidget {
   final TurkmenName item;
-  const NameDetailPage({super.key, required this.item});
+  final ValueChanged<TurkmenName> onToggleLike;
 
+  const NameDetailPage({
+    super.key,
+    required this.item,
+    required this.onToggleLike,
+  });
+
+  @override
+  State<NameDetailPage> createState() => _NameDetailPageState();
+}
+
+class _NameDetailPageState extends State<NameDetailPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     return Scaffold(
-      appBar: AppBar(title: Text(item.name)),
+      appBar: AppBar(title: Text(widget.item.name)),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          widget.item.isLiked ? Icons.favorite : Icons.favorite_border,
+          color: widget.item.isLiked ? Colors.red : null,
+        ),
+        onPressed: () {
+          // Üst seviyeye haber ver
+          widget.onToggleLike(widget.item);
+          // Bu sayfadaki ikonu güncelle
+          setState(() {});
+        },
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
@@ -227,16 +251,23 @@ class NameDetailPage extends StatelessWidget {
               spacing: 12,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text(item.name, style: theme.textTheme.titleLarge),
+                Text(widget.item.name, style: theme.textTheme.titleLarge),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),
                     color: Colors.black,
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
                   child: Text(
-                    item.gender,
-                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                    widget.item.gender,
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
@@ -249,8 +280,11 @@ class NameDetailPage extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(15.0),
               child: Text(
-                item.meaning,
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                widget.item.meaning,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ],
