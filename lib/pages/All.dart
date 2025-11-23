@@ -2,6 +2,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:name_meaning/pages/model/TurkmenName.dart';
+import 'package:share_plus/share_plus.dart';
+
 
 enum SortMode { az, za, favoritesFirst }
 
@@ -196,7 +198,7 @@ class _AllState extends State<All> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => NameDetailPage(item: item, onToggleLike: widget.onToggleLike,),
+                            builder: (_) => NameDetailPage(item: item, onToggleLike: widget.onToggleLike, allItems: widget.items),
                           ),
                         );
                       },
@@ -209,14 +211,17 @@ class _AllState extends State<All> {
   }
 }
 
+
 class NameDetailPage extends StatefulWidget {
   final TurkmenName item;
   final ValueChanged<TurkmenName> onToggleLike;
+  final List<TurkmenName> allItems;
 
   const NameDetailPage({
     super.key,
     required this.item,
     required this.onToggleLike,
+    required this.allItems,
   });
 
   @override
@@ -224,70 +229,163 @@ class NameDetailPage extends StatefulWidget {
 }
 
 class _NameDetailPageState extends State<NameDetailPage> {
+  late List<TurkmenName> _suggestions;
+
+  @override
+  void initState() {
+    super.initState();
+    _generateSuggestions();
+  }
+
+  // 3 rastgele öneri üret
+  void _generateSuggestions() {
+    final others = widget.allItems
+        .where((e) => e.name != widget.item.name)
+        .toList();
+
+    others.shuffle();
+    _suggestions = others.take(3).toList();
+  }
+
+  void _shareName() {
+    final text = '''
+${widget.item.name} (${widget.item.gender})
+
+${widget.item.meaning}
+
+— Türkmen atlary sözlügi app
+''';
+
+    Share.share(
+      text,
+      subject: 'Isim manysy: ${widget.item.name}',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: Text(widget.item.name)),
+      appBar: AppBar(
+        title: Text(widget.item.name),
+        actions: [
+          IconButton(
+            tooltip: 'Paýlaş',
+            icon: const Icon(Icons.ios_share),
+            onPressed: _shareName,
+          ),
+        ],
+      ),
+
       floatingActionButton: FloatingActionButton(
         child: Icon(
           widget.item.isLiked ? Icons.favorite : Icons.favorite_border,
           color: widget.item.isLiked ? Colors.red : null,
         ),
         onPressed: () {
-          // Üst seviyeye haber ver
           widget.onToggleLike(widget.item);
-          // Bu sayfadaki ikonu güncelle
           setState(() {});
         },
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Wrap(
-              spacing: 12,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                Text(widget.item.name, style: theme.textTheme.titleLarge),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    color: Colors.black,
-                  ),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 4,
-                  ),
-                  child: Text(
-                    widget.item.gender,
-                    style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// İsim + Cinsiyet
+              Wrap(
+                spacing: 12,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  Text(widget.item.name, style: theme.textTheme.titleLarge),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: Colors.black,
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 4,
+                    ),
+                    child: Text(
+                      widget.item.gender,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 15),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: const Color(0xFFE4E2E2),
+                ],
               ),
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                widget.item.meaning,
-                style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
+
+              const SizedBox(height: 15),
+
+              /// Anlam Kartı
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: const Color(0xFFE4E2E2),
+                ),
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  widget.item.meaning,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
-            ),
-          ],
+
+              const SizedBox(height: 25),
+
+              /// 🔥 Önerilen İsimler Başlığı
+              Text(
+                'Başgada:',
+                style: theme.textTheme.titleLarge,
+              ),
+              const SizedBox(height: 10),
+
+              /// 🔥 3 RASTGELE ÖNERİ
+              Column(
+                children: _suggestions.map((e) {
+                  return Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    color: const Color(0xFFE4E2E2),
+                  ),
+                  padding: const EdgeInsets.only(top: 2.0, bottom: 2.0, left: 7.0 , right: 7.0),
+                  margin: EdgeInsets.all(5.0),
+                    child: ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(e.name),
+                      subtitle: Text(
+                        e.meaning,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => NameDetailPage(
+                              item: e,
+                              onToggleLike: widget.onToggleLike,
+                              allItems: widget.allItems,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
         ),
       ),
     );
