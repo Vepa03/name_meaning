@@ -1,9 +1,9 @@
 // All.dart
 import 'dart:async';
+import 'dart:math'; // 🔥 random için eklendi
 import 'package:flutter/material.dart';
 import 'package:name_meaning/pages/model/TurkmenName.dart';
 import 'package:share_plus/share_plus.dart';
-
 
 enum SortMode { az, za, favoritesFirst }
 
@@ -27,6 +27,7 @@ class _AllState extends State<All> {
   String _query = '';
   String _genderFilter = 'Tümü';
   SortMode _sortMode = SortMode.az;
+  final Random _random = Random(); // 🔥 random generator
 
   @override
   void initState() {
@@ -89,122 +90,244 @@ class _AllState extends State<All> {
     return sorted;
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final items = _visibleItems;
+  /// 🔥 Günün ady – random isim seç + dialog göster
+  void _showRandomName() {
+    if (widget.items.isEmpty) return;
 
-    return Column(
-      children: [
-        // Üst Kontroller
-        Padding(
-          padding: const EdgeInsets.fromLTRB(15, 12, 15, 6),
-          child: Row(
+    final index = _random.nextInt(widget.items.length);
+    final randomItem = widget.items[index];
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        final theme = Theme.of(context);
+        return AlertDialog(
+          title: Text(
+            'Random',
+            style: theme.textTheme.titleLarge,
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                child: TextField(
-                  controller: _searchCtrl,
-                  textInputAction: TextInputAction.search,
-                  decoration: InputDecoration(
-                    hintText: 'Gözle...',
-                    prefixIcon: Icon(Icons.search),
-                    suffixIcon: _query.isEmpty
-                        ? null
-                        : IconButton(
-                            tooltip: 'Temizle',
-                            onPressed: () {
-                              _searchCtrl.clear();
-                              setState(() => _query = '');
-                            },
-                            icon: Icon(Icons.clear),
-                          ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    isDense: true,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 10),
-              // (İstersen cinsiyet filtre dropdown’unu geri aç)
-              const SizedBox(width: 8),
-              PopupMenuButton<SortMode>(
-                tooltip: 'Sırala',
-                initialValue: _sortMode,
-                onSelected: (mode) => setState(() => _sortMode = mode),
-                itemBuilder: (context) => [
-                  PopupMenuItem(
-                    value: SortMode.az,
-                    child: Row(
-                      children: [Icon(Icons.sort_by_alpha), SizedBox(width: 8), Text('A → Z', )],
+              Wrap(
+                spacing: 8,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  Text(
+                    randomItem.name,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  PopupMenuItem(
-                    value: SortMode.za,
-                    child: Row(
-                      children: [Icon(Icons.sort_by_alpha), SizedBox(width: 8), Text('Z → A', )],
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: Colors.black,
                     ),
-                  ),
-                  PopupMenuItem(
-                    value: SortMode.favoritesFirst,
-                    child: Row(
-                      children: [Icon(Icons.favorite, color: Colors.red, ), SizedBox(width: 8), Text('ilki halanlarym')],
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 3,
+                    ),
+                    child: Text(
+                      randomItem.gender,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Theme.of(context).dividerColor),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Icon(Icons.sort),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                randomItem.meaning,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ],
           ),
-        ),
-        const SizedBox(height: 4),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Ýap', style: TextStyle(color: Colors.red),),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => NameDetailPage(
+                      item: randomItem,
+                      onToggleLike: widget.onToggleLike,
+                      allItems: widget.items,
+                    ),
+                  ),
+                );
+              },
+              child: const Text('Detalyna git', style: TextStyle(color: Colors.blueAccent),),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
-        // Liste
-        Expanded(
-          child: items.isEmpty
-              ? ListView(
-                  children: const [
-                    SizedBox(height: 80),
-                    Center(child: Text('Tapylmady')),
-                  ],
-                )
-              : ListView.separated(
-                  padding: const EdgeInsets.all(15.0),
-                  itemCount: items.length,
-                  separatorBuilder: (_, __) => const Divider(height: 1),
-                  itemBuilder: (context, index) {
-                    final item = items[index];
-                    return ListTile(
-                      key: ValueKey(item.name),
-                      title: Text(item.name,),
-                      trailing: InkWell(
-                        borderRadius: BorderRadius.circular(24),
-                        onTap: () => widget.onToggleLike(item),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Icon(
-                            item.isLiked ? Icons.favorite  : Icons.favorite_border,
-                            color: item.isLiked ? Colors.red : null,
-                          ),
+  @override
+  Widget build(BuildContext context) {
+    final items = _visibleItems;
+
+    // Stack: Column + sağ altta FAB
+    return Stack(
+      children: [
+        Column(
+          children: [
+            // Üst Kontroller
+            Padding(
+              padding: const EdgeInsets.fromLTRB(15, 12, 15, 6),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _searchCtrl,
+                      textInputAction: TextInputAction.search,
+                      decoration: InputDecoration(
+                        hintText: 'Gözle...',
+                        prefixIcon: const Icon(Icons.search),
+                        suffixIcon: _query.isEmpty
+                            ? null
+                            : IconButton(
+                                tooltip: 'Temizle',
+                                onPressed: () {
+                                  _searchCtrl.clear();
+                                  setState(() => _query = '');
+                                },
+                                icon: const Icon(Icons.clear),
+                              ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  // (İstersen cinsiyet filtre dropdown’unu geri aç)
+                  const SizedBox(width: 8),
+                  PopupMenuButton<SortMode>(
+                    tooltip: 'Sırala',
+                    initialValue: _sortMode,
+                    onSelected: (mode) => setState(() => _sortMode = mode),
+                    itemBuilder: (context) => [
+                      const PopupMenuItem(
+                        value: SortMode.az,
+                        child: Row(
+                          children: [
+                            Icon(Icons.sort_by_alpha),
+                            SizedBox(width: 8),
+                            Text('A → Z'),
+                          ],
                         ),
                       ),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => NameDetailPage(item: item, onToggleLike: widget.onToggleLike, allItems: widget.items),
+                      const PopupMenuItem(
+                        value: SortMode.za,
+                        child: Row(
+                          children: [
+                            Icon(Icons.sort_by_alpha),
+                            SizedBox(width: 8),
+                            Text('Z → A'),
+                          ],
+                        ),
+                      ),
+                      const PopupMenuItem(
+                        value: SortMode.favoritesFirst,
+                        child: Row(
+                          children: [
+                            Icon(Icons.favorite, color: Colors.red),
+                            SizedBox(width: 8),
+                            Text('ilki halanlarym'),
+                          ],
+                        ),
+                      ),
+                    ],
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        border:
+                            Border.all(color: Theme.of(context).dividerColor),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(Icons.sort),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 4),
+
+            // Liste
+            Expanded(
+              child: items.isEmpty
+                  ? ListView(
+                      children: const [
+                        SizedBox(height: 80),
+                        Center(child: Text('Tapylmady')),
+                      ],
+                    )
+                  : ListView.separated(
+                      padding: const EdgeInsets.all(15.0),
+                      itemCount: items.length,
+                      separatorBuilder: (_, __) => const Divider(height: 1),
+                      itemBuilder: (context, index) {
+                        final item = items[index];
+                        return ListTile(
+                          key: ValueKey(item.name),
+                          title: Text(item.name),
+                          trailing: InkWell(
+                            borderRadius: BorderRadius.circular(24),
+                            onTap: () => widget.onToggleLike(item),
+                            child: Padding(
+                              padding: const EdgeInsets.all(6.0),
+                              child: Icon(
+                                item.isLiked
+                                    ? Icons.favorite
+                                    : Icons.favorite_border,
+                                color: item.isLiked ? Colors.red : null,
+                              ),
+                            ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => NameDetailPage(
+                                  item: item,
+                                  onToggleLike: widget.onToggleLike,
+                                  allItems: widget.items,
+                                ),
+                              ),
+                            );
+                          },
                         );
                       },
-                    );
-                  },
-                ),
+                    ),
+            ),
+          ],
+        ),
+
+        /// 🔥 Sağ altta FAB – Günün ady
+        Positioned(
+          right: 16,
+          bottom: 16,
+          child: FloatingActionButton.extended(
+            onPressed: _showRandomName,
+            icon: const Icon(Icons.stars),
+            label: const Text('Random'),
+          ),
         ),
       ],
     );

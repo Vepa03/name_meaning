@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
       ),
       popupMenuTheme: const PopupMenuThemeData(color: Colors.white),
       scaffoldBackgroundColor: Colors.white,
-      floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.white)
+      floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.white),
+      dialogTheme: DialogThemeData(backgroundColor: Colors.white)
     );
 
     return MaterialApp(
