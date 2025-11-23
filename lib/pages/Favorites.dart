@@ -1,21 +1,21 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:name_meaning/pages/model/TurkmenName.dart';
+import 'package:share_plus/share_plus.dart';
 
 enum FavSortMode { az, za }
 
 class Favorites extends StatefulWidget {
   final List<TurkmenName> items;
-  /// Favori durumunu değiştirmek için opsiyonel callback.
-  /// Örn: (item) => toggleLike(item)  (SharedPreferences güncelleyen fonksiyonun)
-  final ValueChanged<TurkmenName>? onToggleLike;
+  /// Favori durumunu değiştirmek için callback.
+  final ValueChanged<TurkmenName> onToggleLike;
   /// Boş durumda tüm isimlere gitmek için opsiyonel callback.
   final VoidCallback? onGoToAll;
 
   const Favorites({
     super.key,
     required this.items,
-    this.onToggleLike,
+    required this.onToggleLike,  // ✅ artık guaranteed var
     this.onGoToAll,
   });
 
@@ -93,7 +93,7 @@ class _FavoritesState extends State<Favorites> {
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
                 hintText: 'Gözle ...',
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 suffixIcon: _query.isEmpty
                     ? null
                     : IconButton(
@@ -102,7 +102,7 @@ class _FavoritesState extends State<Favorites> {
                           _searchCtrl.clear();
                           setState(() => _query = '');
                         },
-                        icon: Icon(Icons.clear),
+                        icon: const Icon(Icons.clear),
                       ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -117,16 +117,24 @@ class _FavoritesState extends State<Favorites> {
             initialValue: _sortMode,
             onSelected: (mode) => setState(() => _sortMode = mode),
             itemBuilder: (context) => [
-              PopupMenuItem(
+              const PopupMenuItem(
                 value: FavSortMode.az,
                 child: Row(
-                  children: [Icon(Icons.sort_by_alpha, ), SizedBox(width: 8), Text('A → Z', )],
+                  children: [
+                    Icon(Icons.sort_by_alpha),
+                    SizedBox(width: 8),
+                    Text('A → Z'),
+                  ],
                 ),
               ),
-              PopupMenuItem(
+              const PopupMenuItem(
                 value: FavSortMode.za,
                 child: Row(
-                  children: [Icon(Icons.sort_by_alpha, ), SizedBox(width: 8), Text('Z → A',  )],
+                  children: [
+                    Icon(Icons.sort_by_alpha),
+                    SizedBox(width: 8),
+                    Text('Z → A'),
+                  ],
                 ),
               ),
             ],
@@ -136,7 +144,7 @@ class _FavoritesState extends State<Favorites> {
                 border: Border.all(color: Theme.of(context).dividerColor),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Icon(Icons.sort, ),
+              child: const Icon(Icons.sort),
             ),
           ),
         ],
@@ -171,9 +179,9 @@ class _FavoritesState extends State<Favorites> {
               final item = favorites[index];
               final likeButton = InkWell(
                 borderRadius: BorderRadius.circular(24),
-                onTap: widget.onToggleLike == null ? null : () => widget.onToggleLike!(item),
-                child: Padding(
-                  padding: const EdgeInsets.all(6.0),
+                onTap: () => widget.onToggleLike(item), // ✅ direkt çağır
+                child: const Padding(
+                  padding: EdgeInsets.all(6.0),
                   child: Icon(
                     Icons.favorite,
                     color: Colors.red,
@@ -183,14 +191,18 @@ class _FavoritesState extends State<Favorites> {
 
               return ListTile(
                 key: ValueKey(item.name),
-                title: Text(item.name, ),
-                trailing: widget.onToggleLike == null
-                    ? Tooltip(message: 'Pasif (onToggleLike ekle)', child: likeButton)
-                    : likeButton,
+                title: Text(item.name),
+                trailing: likeButton,
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => NameDetailPage(item: item, onToggleLike: widget.onToggleLike,)),
+                    MaterialPageRoute(
+                      builder: (_) => NameDetailPage(
+                        item: item,
+                        onToggleLike: widget.onToggleLike, // ✅ non-null
+                        allItems: widget.items,
+                      ),
+                    ),
                   );
                 },
               );
@@ -202,15 +214,20 @@ class _FavoritesState extends State<Favorites> {
   }
 }
 
+// ------------------------------------------------------
+// NameDetailPage
+// ------------------------------------------------------
 
 class NameDetailPage extends StatefulWidget {
   final TurkmenName item;
-  final ValueChanged<TurkmenName>? onToggleLike;
+  final ValueChanged<TurkmenName> onToggleLike;
+  final List<TurkmenName> allItems;
 
   const NameDetailPage({
     super.key,
     required this.item,
-    this.onToggleLike,
+    required this.onToggleLike,
+    required this.allItems,
   });
 
   @override
@@ -218,80 +235,165 @@ class NameDetailPage extends StatefulWidget {
 }
 
 class _NameDetailPageState extends State<NameDetailPage> {
+  late List<TurkmenName> _suggestions;
+
+  @override
+  void initState() {
+    super.initState();
+    _generateSuggestions();
+  }
+
+  // 3 rastgele öneri üret
+  void _generateSuggestions() {
+    final others = widget.allItems
+        .where((e) => e.name != widget.item.name)
+        .toList();
+
+    others.shuffle();
+    _suggestions = others.take(3).toList();
+  }
+
+  void _shareName() {
+    final text = '''
+${widget.item.name} (${widget.item.gender})
+
+${widget.item.meaning}
+
+— Türkmen atlary sözlügi app
+''';
+
+    Share.share(
+      text,
+      subject: 'Isim manysy: ${widget.item.name}',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final item = widget.item;
 
     return Scaffold(
-      appBar: AppBar(title: Text(item.name)),
+      appBar: AppBar(
+        title: Text(widget.item.name),
+        actions: [
+          IconButton(
+            tooltip: 'Paýlaş',
+            icon: const Icon(Icons.ios_share),
+            onPressed: _shareName,
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
-          item.isLiked ? Icons.favorite : Icons.favorite_border,
-          color: item.isLiked ? Colors.red : null,
+          widget.item.isLiked ? Icons.favorite : Icons.favorite_border,
+          color: widget.item.isLiked ? Colors.red : null,
         ),
         onPressed: () {
-          // Üst seviyeye haber ver (örneğin SharedPreferences kaydeden fonksiyon)
-          if (widget.onToggleLike != null) {
-            widget.onToggleLike!(item);
-          } else {
-            // Yine de lokal olarak değişsin istiyorsan:
-            setState(() {
-              item.isLiked = !item.isLiked;
-            });
-            return;
-          }
-
-          // Bu sayfadaki ikonu güncelle
+          widget.onToggleLike(widget.item);
           setState(() {});
         },
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Wrap(
-              spacing: 12,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                Text(item.name, style: theme.textTheme.titleLarge),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    color: Colors.black,
-                  ),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 4,
-                  ),
-                  child: Text(
-                    item.gender,
-                    style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// İsim + Cinsiyet
+              Wrap(
+                spacing: 12,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  Text(widget.item.name, style: theme.textTheme.titleLarge),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: Colors.black,
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 4,
+                    ),
+                    child: Text(
+                      widget.item.gender,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 15),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: const Color(0xFFE4E2E2),
+                ],
               ),
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                item.meaning,
-                style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
+
+              const SizedBox(height: 15),
+
+              /// Anlam Kartı
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: const Color(0xFFE4E2E2),
+                ),
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  widget.item.meaning,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
-            ),
-          ],
+
+              const SizedBox(height: 25),
+
+              /// 🔥 Önerilen İsimler Başlığı
+              Text(
+                'Başgada:',
+                style: theme.textTheme.titleLarge,
+              ),
+              const SizedBox(height: 10),
+
+              /// 🔥 3 RASTGELE ÖNERİ
+              Column(
+                children: _suggestions.map((e) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: const Color(0xFFE4E2E2),
+                    ),
+                    padding: const EdgeInsets.only(
+                      top: 2.0,
+                      bottom: 2.0,
+                      left: 7.0,
+                      right: 7.0,
+                    ),
+                    margin: const EdgeInsets.all(5.0),
+                    child: ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(e.name),
+                      subtitle: Text(
+                        e.meaning,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => NameDetailPage(
+                              item: e,
+                              onToggleLike: widget.onToggleLike,
+                              allItems: widget.allItems,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
         ),
       ),
     );
